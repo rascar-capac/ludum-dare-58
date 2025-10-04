@@ -64,7 +64,10 @@ public class InteractionManager : Singleton<InteractionManager>
                     CurrentInteractable.StartInteraction(mousePosition);
                 }
 
-                CurrentInteractable.HoldInteraction(mousePosition);
+                if (CurrentInteractable != null)
+                {
+                    CurrentInteractable.HoldInteraction(mousePosition);
+                }
             }
         }
 
