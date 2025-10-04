@@ -5,6 +5,7 @@ public class GameManager : Singleton<GameManager>
 {
     public event Action OnGameStarted;
     public event Action<bool, int> OnGameStopped;
+    public bool GameIsRunning;
 
     private void Start()
     {
@@ -14,6 +15,8 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
+        GameIsRunning = true;
+
         OnGameStarted?.Invoke();
     }
 
@@ -21,6 +24,8 @@ public class GameManager : Singleton<GameManager>
     {
         bool isWon = MoneyManager.Instance.MoneyAmount >= MoneyManager.Instance.Goal && TimeManager.Instance.Timer > 0f;
         int score = MoneyManager.Instance.MoneyAmount;
+
+        GameIsRunning = false;
 
         OnGameStopped?.Invoke(isWon, score);
     }

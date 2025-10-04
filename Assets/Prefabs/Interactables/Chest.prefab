@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476080811840425862}
   - component: {fileID: 8027645712225751979}
-  - component: {fileID: 8397167334362296704}
+  - component: {fileID: 6161398543458100135}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 3284010354119276227}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.29, y: -1.22, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -94,8 +94,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &8397167334362296704
-EdgeCollider2D:
+--- !u!60 &6161398543458100135
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,19 +129,24 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -1.3774846, y: -1.1194628}
-  - {x: -1.3124204, y: 0.5006814}
-  - {x: -1.0320177, y: 1.1639669}
-  - {x: 1.1307828, y: 1.1157258}
-  - {x: 1.3432758, y: 0.4819587}
-  - {x: 1.2754164, y: -1.0928603}
-  - {x: -1.3848648, y: -1.1173464}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 1.1285279, y: 1.1166507}
+      - {x: -1.0655804, y: 1.1385124}
+      - {x: -1.3172855, y: 0.48806223}
+      - {x: -1.382638, y: -1.1182771}
+      - {x: 1.2822639, y: -1.0965745}
+      - {x: 1.3362751, y: 0.4907752}
+  m_UseDelaunayMesh: 0
 --- !u!1 &5093434025739774722
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3607056618719387907}
   - component: {fileID: 370398148744181273}
+  - component: {fileID: 482413215219696367}
   m_Layer: 6
   m_Name: Interaction
   m_TagString: Untagged
@@ -310,3 +316,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.0265555, y: 2.4985092}
   m_EdgeRadius: 0
+--- !u!114 &482413215219696367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7389031941360638363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422b01bc453b0c0448c08078fa6a8568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Breakable
+  Object: {fileID: 3284010354119276227}
+  Content:
+  - {fileID: 9092120005375350912, guid: 624b55e5e2092044280958e2b2dc92e8, type: 3}
+  - {fileID: 9092120005375350912, guid: 624b55e5e2092044280958e2b2dc92e8, type: 3}
+  - {fileID: 9092120005375350912, guid: 624b55e5e2092044280958e2b2dc92e8, type: 3}
+  - {fileID: 9092120005375350912, guid: 624b55e5e2092044280958e2b2dc92e8, type: 3}

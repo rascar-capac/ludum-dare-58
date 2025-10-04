@@ -21,6 +21,11 @@ public class InteractionManager : Singleton<InteractionManager>
 
     public void CheckInteractions()
     {
+        if (!GameManager.Instance.GameIsRunning)
+        {
+            return;
+        }
+
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());

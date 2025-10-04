@@ -1,0 +1,25 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Breakable : MonoBehaviour, IInteractable
+{
+    public GameObject Object;
+    public List<GameObject> Content;
+
+    public void Interact()
+    {
+        Break();
+    }
+
+    public void Break()
+    {
+        //TODO: break into multiple pieces
+
+        foreach (GameObject content in Content)
+        {
+            Instantiate(content, transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0f), Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward));
+        }
+
+        Destroy(Object);
+    }
+}

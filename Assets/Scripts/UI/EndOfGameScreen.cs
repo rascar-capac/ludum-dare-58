@@ -16,8 +16,11 @@ public class EndOfGameScreen : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnGameStarted -= GameManager_OnGameStarted;
-        GameManager.Instance.OnGameStopped -= GameManager_OnGameStopped;
+        if (GameManager.TryGetInstance(out GameManager gameManager))
+        {
+            gameManager.OnGameStarted -= GameManager_OnGameStarted;
+            gameManager.OnGameStopped -= GameManager_OnGameStopped;
+        }
     }
 
     private void GameManager_OnGameStarted()

@@ -17,7 +17,10 @@ public class MoneyManager : Singleton<MoneyManager>
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnGameStarted -= GameManager_OnGameStarted;
+        if (GameManager.TryGetInstance(out GameManager gameManager))
+        {
+            gameManager.OnGameStarted -= GameManager_OnGameStarted;
+        }
     }
 
     public void CollectMoney(int amount)
