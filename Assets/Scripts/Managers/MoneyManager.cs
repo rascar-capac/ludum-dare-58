@@ -28,7 +28,7 @@ public class MoneyManager : Singleton<MoneyManager>
 
         if (MoneyAmount >= Goal)
         {
-            GameManager.Instance.StopGame(isWon: true, score: MoneyAmount);
+            GameManager.Instance.StopGame();
         }
     }
 
