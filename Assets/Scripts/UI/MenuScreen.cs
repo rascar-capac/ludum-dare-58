@@ -1,7 +1,4 @@
-#if UNITY_EDITOR
 using TMPro;
-using UnityEditor;
-#endif
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -68,11 +65,7 @@ public class MenuScreen : MonoBehaviour
 
     private void QuitButton_OnClick()
     {
-#if UNITY_EDITOR
-        EditorApplication.ExitPlaymode();
-#else
-        Application.Quit();
-#endif
+        GameManager.Instance.QuitGame();
     }
 
     private void Close()

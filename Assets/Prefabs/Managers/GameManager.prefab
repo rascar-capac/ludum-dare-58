@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _destroyOnLoad: 0
+  _pauseInput: {fileID: 3999640726921077906, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  GameIsRunning: 0
+  GameIsPaused: 0
