@@ -82,7 +82,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.14
+  m_Radius: 0.17453466
 --- !u!1 &5185923290216622888
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.94
+  m_Radius: 0.14364848
 --- !u!50 &5284266626342001525
 Rigidbody2D:
   serializedVersion: 5
