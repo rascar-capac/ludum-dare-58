@@ -3,14 +3,14 @@ using Rascar.Toolbox;
 
 public class GameManager : Singleton<GameManager>
 {
+    public event Action OnGameReady;
     public event Action OnGameStarted;
     public event Action<bool, int> OnGameStopped;
     public bool GameIsRunning;
 
     private void Start()
     {
-        //TODO: hook to the menu
-        StartGame();
+        OnGameReady?.Invoke();
     }
 
     public void StartGame()
