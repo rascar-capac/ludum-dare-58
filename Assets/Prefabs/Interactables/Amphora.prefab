@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 794410174842979622}
   - component: {fileID: 438508797024642666}
   - component: {fileID: 8027827495243612013}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Amphora
   m_TagString: Untagged
   m_Icon: {fileID: 0}

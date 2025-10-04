@@ -193,7 +193,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 56d2150cce49cf94492483c71101779d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 1212369839918428251}
   - component: {fileID: 2511929247662739967}
   - component: {fileID: 5284266626342001525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

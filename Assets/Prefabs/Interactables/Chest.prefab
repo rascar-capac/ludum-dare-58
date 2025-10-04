@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 476080811840425862}
   - component: {fileID: 8027645712225751979}
   - component: {fileID: 6161398543458100135}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,8 +143,8 @@ PolygonCollider2D:
     - - {x: 1.1285279, y: 1.1166507}
       - {x: -1.0655804, y: 1.1385124}
       - {x: -1.3172855, y: 0.48806223}
-      - {x: -1.382638, y: -1.1182771}
-      - {x: 1.2822639, y: -1.0965745}
+      - {x: -1.3791952, y: -1.0872927}
+      - {x: 1.2822639, y: -1.0793612}
       - {x: 1.3362751, y: 0.4907752}
   m_UseDelaunayMesh: 0
 --- !u!1 &5093434025739774722

@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 2552532770407366503}
   - component: {fileID: 696836999764846408}
   - component: {fileID: 8491568875863544967}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
