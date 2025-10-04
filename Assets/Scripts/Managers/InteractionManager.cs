@@ -13,6 +13,12 @@ public class InteractionManager : Singleton<InteractionManager>
         base.Awake();
 
         _mainCamera = Camera.main;
+        GameManager.Instance.OnGameStopped += GameManager_OnGameStopped;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnGameStopped -= GameManager_OnGameStopped;
     }
 
     private void Update()
@@ -66,5 +72,15 @@ public class InteractionManager : Singleton<InteractionManager>
         {
             previousInteractable.StopInteraction();
         }
+    }
+
+    private void GameManager_OnGameStopped(bool isWon, int score)
+    {
+        CleanUp();
+    }
+
+    public void CleanUp()
+    {
+        CurrentInteractable = null;
     }
 }
