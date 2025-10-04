@@ -13,7 +13,10 @@ public class MoneyCountUI : MonoBehaviour
 
     private void OnDestroy()
     {
-        MoneyManager.Instance.OnMoneyChanged -= MoneyManager_OnMoneyChanged;
+        if (MoneyManager.TryGetInstance(out MoneyManager moneyManager))
+        {
+            moneyManager.OnMoneyChanged -= MoneyManager_OnMoneyChanged;
+        }
     }
 
     private void MoneyManager_OnInitialized()

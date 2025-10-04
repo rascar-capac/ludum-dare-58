@@ -6,10 +6,13 @@ public class Breakable : MonoBehaviour, IInteractable
     public GameObject Object;
     public List<GameObject> Content;
 
-    public void Interact()
+    public void StartInteraction(Vector2 mouseWorldPosition)
     {
         Break();
     }
+
+    public void HoldInteraction(Vector2 mouseWorldPosition) { }
+    public void StopInteraction() { }
 
     public void Break()
     {

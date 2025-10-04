@@ -5,10 +5,13 @@ public class Money : MonoBehaviour, IInteractable
     public GameObject Object;
     public int Value;
 
-    public void Interact()
+    public void StartInteraction(Vector2 mouseWorldPosition)
     {
         CollectMoney();
     }
+
+    public void HoldInteraction(Vector2 mouseWorldPosition) { }
+    public void StopInteraction() { }
 
     public void CollectMoney()
     {

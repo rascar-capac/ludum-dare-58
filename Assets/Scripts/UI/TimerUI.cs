@@ -12,7 +12,10 @@ public class TimerUI : MonoBehaviour
 
     private void OnDestroy()
     {
-        TimeManager.Instance.OnTimerChanged -= TimeManager_OnTimerChanged;
+        if (TimeManager.TryGetInstance(out TimeManager timeManager))
+        {
+            timeManager.OnTimerChanged -= TimeManager_OnTimerChanged;
+        }
     }
 
     private void TimeManager_OnTimerChanged()

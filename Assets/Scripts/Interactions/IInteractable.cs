@@ -1,4 +1,8 @@
+using UnityEngine;
+
 public interface IInteractable
 {
-    void Interact();
+    void StartInteraction(Vector2 mouseWorldPosition);
+    void HoldInteraction(Vector2 mouseWorldPosition);
+    void StopInteraction();
 }

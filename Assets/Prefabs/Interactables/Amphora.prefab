@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4609815776358771584}
   - component: {fileID: 8943275768160220112}
+  - component: {fileID: 5358977345577947858}
   m_Layer: 6
   m_Name: Interaction
   m_TagString: Untagged
@@ -69,6 +70,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.01859665, y: 0.037194073}
   m_Size: {x: 1.456419, y: 1.6609863}
   m_Direction: 0
+--- !u!114 &5358977345577947858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005072734914501654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0371adb362ffaee4c82a6760a5f07f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Draggable
+  Rigidbody: {fileID: 3533233063493771222}
+  SpriteRenderer: {fileID: 6612885162979570678}
+  Object: {fileID: 5251616667845428459}
 --- !u!1 &1763987652238291927
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +147,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!70 &794410174842979622
 CapsuleCollider2D:

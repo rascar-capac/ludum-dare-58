@@ -6,6 +6,7 @@ public class InteractionManager : Singleton<InteractionManager>
 {
     public LayerMask InteractionMask;
     private Camera _mainCamera;
+    public IInteractable CurrentInteractable;
 
     protected override void Awake()
     {
@@ -26,15 +27,44 @@ public class InteractionManager : Singleton<InteractionManager>
             return;
         }
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        IInteractable previousInteractable = CurrentInteractable;
+        CurrentInteractable = null;
+
+        if (Mouse.current.leftButton.isPressed)
         {
             Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, distance: Mathf.Infinity, layerMask: InteractionMask);
 
-            if (hit.collider != null && hit.collider.TryGetComponent(out IInteractable interactable))
+            if (previousInteractable != null)
             {
-                interactable.Interact();
+                CurrentInteractable = previousInteractable;
             }
+            else
+            {
+                RaycastHit2D[] hitList = Physics2D.RaycastAll(mousePosition, Vector2.zero, distance: Mathf.Infinity, layerMask: InteractionMask);
+
+                foreach (RaycastHit2D hit in hitList)
+                {
+                    if (hit.collider != null && hit.collider.TryGetComponent(out CurrentInteractable))
+                    {
+                        break;
+                    }
+                }
+            }
+
+            if (CurrentInteractable != null)
+            {
+                if (CurrentInteractable != previousInteractable)
+                {
+                    CurrentInteractable.StartInteraction(mousePosition);
+                }
+
+                CurrentInteractable.HoldInteraction(mousePosition);
+            }
+        }
+
+        if (previousInteractable != null && CurrentInteractable != previousInteractable)
+        {
+            previousInteractable.StopInteraction();
         }
     }
 }
