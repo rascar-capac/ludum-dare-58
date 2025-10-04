@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MoneyCountUI : MonoBehaviour
 {
-    public TMP_Text Text;
+    public TMP_Text Count;
 
     private void Awake()
     {
@@ -33,6 +33,6 @@ public class MoneyCountUI : MonoBehaviour
             //TODO: animation
         }
 
-        Text.text = MoneyManager.Instance.MoneyAmount.ToString();
+        Count.text = $"{MoneyManager.Instance.MoneyAmount}/{MoneyManager.Instance.Goal}";
     }
 }

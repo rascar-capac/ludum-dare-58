@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7161687365135627820}
   - component: {fileID: 4107181118972318305}
   m_Layer: 5
-  m_Name: MoneyAmount
+  m_Name: MoneyCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3196884a9cbae4a4597e592a92249411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyCountUI
-  Text: {fileID: 4326721709930180423}
+  Count: {fileID: 4326721709930180423}
 --- !u!1 &5150858429631846447
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 999
+  m_text: 999/999
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

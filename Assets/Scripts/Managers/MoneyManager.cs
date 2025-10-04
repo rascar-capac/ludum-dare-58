@@ -1,6 +1,5 @@
 using System;
 using Rascar.Toolbox;
-using UnityEngine;
 
 public class MoneyManager : Singleton<MoneyManager>
 {
@@ -11,10 +10,14 @@ public class MoneyManager : Singleton<MoneyManager>
     public event Action OnInitialized;
     public event Action OnMoneyChanged;
 
-    private void Start()
+    protected override void Awake()
     {
-        //TODO: subscribe to game event to trigger initialization
-        Initialize();
+        GameManager.Instance.OnGameStarted += GameManager_OnGameStarted;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnGameStarted -= GameManager_OnGameStarted;
     }
 
     public void CollectMoney(int amount)
@@ -25,7 +28,7 @@ public class MoneyManager : Singleton<MoneyManager>
 
         if (MoneyAmount >= Goal)
         {
-            Debug.Log("WIN");
+            GameManager.Instance.StopGame(isWon: true, score: MoneyAmount);
         }
     }
 
@@ -34,5 +37,10 @@ public class MoneyManager : Singleton<MoneyManager>
         MoneyAmount = 0;
 
         OnInitialized?.Invoke();
+    }
+
+    private void GameManager_OnGameStarted()
+    {
+        Initialize();
     }
 }
