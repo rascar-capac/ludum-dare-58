@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   _destroyOnLoad: 1
-  CountdownDuration: 5
+  CountdownDuration: 60
   Timer: 0
   CountdownIsRunning: 0
