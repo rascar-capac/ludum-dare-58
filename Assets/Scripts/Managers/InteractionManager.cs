@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class InteractionManager : Singleton<InteractionManager>
 {
+    public LayerMask InteractionMask;
     private Camera _mainCamera;
 
     protected override void Awake()
@@ -23,7 +24,7 @@ public class InteractionManager : Singleton<InteractionManager>
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, distance: Mathf.Infinity, layerMask: InteractionMask);
 
             if (hit.collider != null && hit.collider.TryGetComponent(out IInteractable interactable))
             {

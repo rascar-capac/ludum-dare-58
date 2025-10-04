@@ -45,3 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionManager
   _destroyOnLoad: 1
+  InteractionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  MainCamera: {fileID: 0}

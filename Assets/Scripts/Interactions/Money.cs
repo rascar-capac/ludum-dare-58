@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Money : MonoBehaviour, IInteractable
 {
+    public GameObject Object;
     public int Value;
 
     public void Interact()
@@ -12,7 +13,7 @@ public class Money : MonoBehaviour, IInteractable
     public void CollectMoney()
     {
         MoneyManager.Instance.CollectMoney(Value);
-        Destroy(gameObject);
+        Destroy(Object);
         //TODO: animation
     }
 }
