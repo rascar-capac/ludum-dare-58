@@ -1261,14 +1261,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3370792506778334466, guid: 173829388442b0f428fb7055a20da3a1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 718.7356
-      objectReference: {fileID: 0}
-    - target: {fileID: 3370792506778334466, guid: 173829388442b0f428fb7055a20da3a1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4916964891638021014, guid: 173829388442b0f428fb7055a20da3a1, type: 3}
       propertyPath: m_Name
       value: EndOfGameScreen
