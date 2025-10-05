@@ -44,7 +44,7 @@ public class GameManager : Singleton<GameManager>
 
     public void StopGame()
     {
-        bool isWon = MoneyManager.Instance.MoneyAmount >= MoneyManager.Instance.Goal && TimeManager.Instance.Timer > 0f && BrokenObjectsLimiter.Instance.BrokenObjectsCount < BrokenObjectsLimiter.Instance.MaxBrokenObjectsCount;
+        bool isWon = MoneyManager.Instance.MoneyAmount >= MoneyManager.Instance.Goal /*&& TimeManager.Instance.Timer > 0f */ && BrokenObjectsLimiter.Instance.BrokenObjectsCount < BrokenObjectsLimiter.Instance.MaxBrokenObjectsCount;
         int score = MoneyManager.Instance.MoneyAmount;
 
         GameIsStarted = false;
