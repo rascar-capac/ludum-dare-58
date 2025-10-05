@@ -18,7 +18,10 @@ public class InteractionManager : Singleton<InteractionManager>
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnGameStopped -= GameManager_OnGameStopped;
+        if (GameManager.TryGetInstance(out GameManager gameManager))
+        {
+            gameManager.OnGameStopped -= GameManager_OnGameStopped;
+        }
     }
 
     private void Update()
