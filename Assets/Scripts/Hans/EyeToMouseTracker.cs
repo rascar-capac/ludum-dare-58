@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class EyeToMouseTracker : MonoBehaviour
 {
     public Transform Eye;
+    public Transform PointBetweenEyes;
     public float MaxEyeDistance;
     public float MaxMouseDistance;
     public float EyeSpeed;
@@ -25,10 +26,11 @@ public class EyeToMouseTracker : MonoBehaviour
     {
         Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 eyePosition = Eye.position;
+        Vector2 pointBetweenEyesPosition = PointBetweenEyes.position;
         Vector2 eyeToMouseDirection = (mousePosition - eyePosition).normalized;
-        float mouseDistance = (eyePosition - mousePosition).magnitude;
+        float mouseDistance = (pointBetweenEyesPosition - mousePosition).magnitude;
         float eyeDistance = MaxEyeDistance / MaxMouseDistance * mouseDistance;
-        eyeDistance = Mathf.Clamp(math.remap(DistanceWithMinProximityMultiplier, DistanceWithMaxProximityMultiplier, eyeDistance, MaxEyeDistance, eyeDistance), eyeDistance, MaxEyeDistance);
+        eyeDistance = Mathf.Clamp(math.remap(DistanceWithMinProximityMultiplier, DistanceWithMaxProximityMultiplier, eyeDistance, MaxEyeDistance, mouseDistance), eyeDistance, MaxEyeDistance);
 
         Vector2 targetPosition = _initialPosition + eyeDistance * eyeToMouseDirection;
 
