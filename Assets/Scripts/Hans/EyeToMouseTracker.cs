@@ -1,17 +1,19 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class EyeToMouseTracker : MonoBehaviour
 {
     public Transform Eye;
-    public float MouseToEyeDistanceRatio;
+    public float MaxEyeDistance;
+    public float MaxMouseDistance;
     public float EyeSpeed;
+    public float DistanceWithMinProximityMultiplier;
+    public float DistanceWithMaxProximityMultiplier;
 
     private Camera _mainCamera;
     private Vector2 _initialPosition;
     private Vector3 _currentVelocity;
-
-    //à partir d’une certaine distance de son oeil, on ajoute un multiplicateur de distance pour simuler la proximité et le faire loucher
 
     private void Awake()
     {
@@ -25,8 +27,10 @@ public class EyeToMouseTracker : MonoBehaviour
         Vector2 eyePosition = Eye.position;
         Vector2 eyeToMouseDirection = (mousePosition - eyePosition).normalized;
         float mouseDistance = (eyePosition - mousePosition).magnitude;
+        float eyeDistance = MaxEyeDistance / MaxMouseDistance * mouseDistance;
+        eyeDistance = Mathf.Clamp(math.remap(DistanceWithMinProximityMultiplier, DistanceWithMaxProximityMultiplier, eyeDistance, MaxEyeDistance, eyeDistance), eyeDistance, MaxEyeDistance);
 
-        Vector2 targetPosition = _initialPosition + MouseToEyeDistanceRatio * mouseDistance * eyeToMouseDirection;
+        Vector2 targetPosition = _initialPosition + eyeDistance * eyeToMouseDirection;
 
         Eye.position = Vector3.SmoothDamp(Eye.position, targetPosition, ref _currentVelocity, EyeSpeed);
     }
