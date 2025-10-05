@@ -45,7 +45,6 @@ public class Draggable : MonoBehaviour, IInteractable
         delta = new(Mathf.Clamp(delta.x, -100f, 100f), Mathf.Clamp(delta.y, -100f, 100f));
 
         Rigidbody.AddForce(delta, ForceMode2D.Impulse);
-        Debug.Log(Mouse.current.delta.value * 3);
     }
 
     private void Awake()

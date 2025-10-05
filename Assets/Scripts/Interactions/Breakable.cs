@@ -1,30 +1,40 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class Breakable : MonoBehaviour, IInteractable, ITreasure
+public class Breakable : MonoBehaviour, ITreasure
 {
-    [SerializeField] private GameObject _object;
+    public Rigidbody2D Rigidbody;
+    public Vector2 MinMaxDamagingVelocityMagnitude;
+    public SpriteRenderer SpriteRenderer;
 
-    public GameObject Object => _object;
+    public GameObject Object => gameObject;
     public List<GameObject> Content;
+    public float Resistance01;
+    public bool IsBroken;
 
     private void Awake()
     {
         TreasureProximityDetector.Instance.RegisterTreasure(this);
+        SetResistance(1f);
     }
 
-    public void StartInteraction(Vector2 mouseWorldPosition)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Break();
-    }
+        if (IsBroken)
+        {
+            return;
+        }
 
-    public void HoldInteraction(Vector2 mouseWorldPosition) { }
-    public void StopInteraction() { }
+        float damage = math.remap(MinMaxDamagingVelocityMagnitude.x, MinMaxDamagingVelocityMagnitude.y, 0f, 1f, collision.relativeVelocity.magnitude);
+        damage = Mathf.Clamp01(damage);
+
+        SetResistance(Mathf.Clamp01(Resistance01 - damage));
+    }
 
     public void Break()
     {
-        //TODO: break into multiple pieces
-
         foreach (GameObject content in Content)
         {
             Instantiate(content, transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0f), Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.forward));
@@ -32,5 +42,17 @@ public class Breakable : MonoBehaviour, IInteractable, ITreasure
 
         TreasureProximityDetector.Instance.UnregisterTreasure(this);
         Destroy(Object);
+        IsBroken = true;
+    }
+
+    public void SetResistance(float value)
+    {
+        Resistance01 = value;
+        SpriteRenderer.material.SetFloat("_Intensity", 1f - Resistance01);
+
+        if (Resistance01 == 0f)
+        {
+            Break();
+        }
     }
 }

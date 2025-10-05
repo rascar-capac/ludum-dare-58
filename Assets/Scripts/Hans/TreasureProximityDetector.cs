@@ -57,7 +57,7 @@ public class TreasureProximityDetector : Singleton<TreasureProximityDetector>
 
         foreach (ITreasure treasure in _treasureList)
         {
-            if ((treasure.Object.transform.position.ToVector2() - mousePosition).sqrMagnitude < FreakingMaxDistance)
+            if ((treasure.Object.transform.position.ToVector2() - mousePosition).sqrMagnitude < FreakingMaxDistance * FreakingMaxDistance)
             {
                 SetFreaking(true);
 

@@ -689,6 +689,14 @@ PrefabInstance:
       propertyPath: 'Content.Array.data[0]'
       value: 
       objectReference: {fileID: 7599737319608724398, guid: b248f982ee682a8438400458d36c7882, type: 3}
+    - target: {fileID: 2630627450360494453, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
+      propertyPath: Content.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630627450360494453, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
+      propertyPath: 'Content.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7599737319608724398, guid: b248f982ee682a8438400458d36c7882, type: 3}
     - target: {fileID: 3284010354119276227, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
       propertyPath: m_Name
       value: Chest (1)
@@ -3236,6 +3244,22 @@ PrefabInstance:
       propertyPath: 'Content.Array.data[0]'
       value: 
       objectReference: {fileID: 7599737319608724398, guid: b248f982ee682a8438400458d36c7882, type: 3}
+    - target: {fileID: 2630627450360494453, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
+      propertyPath: Content.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630627450360494453, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
+      propertyPath: 'Content.Array.data[0]'
+      value: 
+      objectReference: {fileID: 287720001861980392, guid: 47286c460bca40442a40b124bec1f34f, type: 3}
+    - target: {fileID: 2630627450360494453, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
+      propertyPath: 'Content.Array.data[1]'
+      value: 
+      objectReference: {fileID: 287720001861980392, guid: a55b03d2e5a18724aaa9ea0758222524, type: 3}
+    - target: {fileID: 2630627450360494453, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
+      propertyPath: 'Content.Array.data[2]'
+      value: 
+      objectReference: {fileID: 287720001861980392, guid: a55b03d2e5a18724aaa9ea0758222524, type: 3}
     - target: {fileID: 3284010354119276227, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
       propertyPath: m_Name
       value: Chest (2)
@@ -3691,6 +3715,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 15651165}
     m_Modifications:
+    - target: {fileID: 957989430934917063, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
+      propertyPath: Content.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 957989430934917063, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
+      propertyPath: 'Content.Array.data[0]'
+      value: 
+      objectReference: {fileID: 9092120005375350912, guid: 624b55e5e2092044280958e2b2dc92e8, type: 3}
+    - target: {fileID: 957989430934917063, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
+      propertyPath: 'Content.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8950421200933235526, guid: 57e833ec11dec1c4c883cd5fe259a157, type: 3}
     - target: {fileID: 1763987652238291927, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
       propertyPath: m_Name
       value: Amphora (1)
@@ -5681,6 +5717,14 @@ PrefabInstance:
       propertyPath: 'Content.Array.data[3]'
       value: 
       objectReference: {fileID: 287720001861980392, guid: a55b03d2e5a18724aaa9ea0758222524, type: 3}
+    - target: {fileID: 2630627450360494453, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
+      propertyPath: Content.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630627450360494453, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
+      propertyPath: 'Content.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6530656844541371737, guid: b93d717131ff89b4a805feef7515866b, type: 3}
     - target: {fileID: 3284010354119276227, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
       propertyPath: m_Name
       value: Chest
@@ -5698,6 +5742,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 15651165}
     m_Modifications:
+    - target: {fileID: 240479047350945422, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
+      propertyPath: MinMaxDamagingVelocity.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 957989430934917063, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
+      propertyPath: Content.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 957989430934917063, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
+      propertyPath: 'Content.Array.data[0]'
+      value: 
+      objectReference: {fileID: 9092120005375350912, guid: 624b55e5e2092044280958e2b2dc92e8, type: 3}
+    - target: {fileID: 957989430934917063, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
+      propertyPath: 'Content.Array.data[1]'
+      value: 
+      objectReference: {fileID: 287720001861980392, guid: a55b03d2e5a18724aaa9ea0758222524, type: 3}
+    - target: {fileID: 957989430934917063, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
+      propertyPath: 'Content.Array.data[2]'
+      value: 
+      objectReference: {fileID: 287720001861980392, guid: a55b03d2e5a18724aaa9ea0758222524, type: 3}
     - target: {fileID: 1763987652238291927, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
       propertyPath: m_Name
       value: Amphora
@@ -6028,6 +6092,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1457676028}
     m_Modifications:
+    - target: {fileID: 1155559702028169228, guid: 10d0f7c40a48ec34291ad73abe1de2a9, type: 3}
+      propertyPath: Content.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155559702028169228, guid: 10d0f7c40a48ec34291ad73abe1de2a9, type: 3}
+      propertyPath: 'Content.Array.data[0]'
+      value: 
+      objectReference: {fileID: 287720001861980392, guid: 47286c460bca40442a40b124bec1f34f, type: 3}
+    - target: {fileID: 1155559702028169228, guid: 10d0f7c40a48ec34291ad73abe1de2a9, type: 3}
+      propertyPath: 'Content.Array.data[1]'
+      value: 
+      objectReference: {fileID: 287720001861980392, guid: 47286c460bca40442a40b124bec1f34f, type: 3}
     - target: {fileID: 2699695007767703232, guid: 10d0f7c40a48ec34291ad73abe1de2a9, type: 3}
       propertyPath: m_Name
       value: Plate
