@@ -34,6 +34,6 @@ public class EyeToMouseTracker : MonoBehaviour
 
         Vector2 targetPosition = _initialPosition + eyeDistance * eyeToMouseDirection;
 
-        Eye.position = Vector3.SmoothDamp(Eye.position, targetPosition, ref _currentVelocity, EyeSpeed);
+        Eye.position = Vector3.SmoothDamp(Eye.position, targetPosition, ref _currentVelocity, EyeSpeed, maxSpeed: Mathf.Infinity, deltaTime: Time.unscaledDeltaTime);
     }
 }

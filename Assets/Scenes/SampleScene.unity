@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerOnRestart
   Prefab: {fileID: 5251616667845428459, guid: 43590e90f072e1a43abbef1eb2e51e7c, type: 3}
-  GameHasBeenStartedOnce: 0
 --- !u!4 &15651165
 Transform:
   m_ObjectHideFlags: 0
@@ -2657,7 +2656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerOnRestart
   Prefab: {fileID: 1212369839918428251, guid: 624b55e5e2092044280958e2b2dc92e8, type: 3}
-  GameHasBeenStartedOnce: 0
 --- !u!4 &1203487052
 Transform:
   m_ObjectHideFlags: 0
@@ -3487,7 +3485,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerOnRestart
   Prefab: {fileID: 5119734862564305631, guid: 57e833ec11dec1c4c883cd5fe259a157, type: 3}
-  GameHasBeenStartedOnce: 0
 --- !u!4 &1676503333
 Transform:
   m_ObjectHideFlags: 0
@@ -3535,7 +3532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerOnRestart
   Prefab: {fileID: 476080811840425862, guid: aaacd6f44bc645b4bbe64433ab882949, type: 3}
-  GameHasBeenStartedOnce: 0
 --- !u!4 &1712163446
 Transform:
   m_ObjectHideFlags: 0
