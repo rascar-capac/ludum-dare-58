@@ -1,6 +1,5 @@
+using System;
 using System.Collections.Generic;
-using Rascar.Toolbox;
-using Rascar.Toolbox.Extensions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -57,7 +56,7 @@ public class TreasureProximityDetector : Singleton<TreasureProximityDetector>
 
         foreach (ITreasure treasure in _treasureList)
         {
-            if ((treasure.Object.transform.position.ToVector2() - mousePosition).sqrMagnitude < FreakingMaxDistance * FreakingMaxDistance)
+            if ((ToVector2(treasure.Object.transform.position) - mousePosition).sqrMagnitude < FreakingMaxDistance * FreakingMaxDistance)
             {
                 SetFreaking(true);
 
@@ -84,5 +83,23 @@ public class TreasureProximityDetector : Singleton<TreasureProximityDetector>
     private void GameManager_OnGameStopped(bool isWon, int score)
     {
         SetFreaking(false);
+    }
+
+    public Vector2 ToVector2(Vector3 vector, EAxis ignoredAxis = EAxis.Z)
+    {
+        return ignoredAxis switch
+        {
+            EAxis.X => new Vector2(vector.y, vector.z),
+            EAxis.Y => new Vector2(vector.x, vector.z),
+            EAxis.Z => new Vector2(vector.x, vector.y),
+            _ => throw new ArgumentException($"Tried to ignore wrong axis type {ignoredAxis}"),
+        };
+    }
+
+    public enum EAxis
+    {
+        X,
+        Y,
+        Z,
     }
 }

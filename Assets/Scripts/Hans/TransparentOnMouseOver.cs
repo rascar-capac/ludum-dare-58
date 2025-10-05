@@ -1,4 +1,3 @@
-using Rascar.Toolbox.Extensions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -45,6 +44,13 @@ public class TransparentOnMouseOver : MonoBehaviour
 
     private void SetSpriteTransparent(bool isTransparent)
     {
-        SpriteRenderer.SetAlpha(isTransparent ? 0.5f : 1f);
+        SetAlpha(SpriteRenderer, isTransparent ? 0.5f : 1f);
+    }
+
+    public static void SetAlpha(SpriteRenderer spriteRenderer, float alpha)
+    {
+        Color color = spriteRenderer.color;
+        color.a = alpha;
+        spriteRenderer.color = color;
     }
 }

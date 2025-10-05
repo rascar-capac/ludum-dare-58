@@ -1,5 +1,4 @@
 using System;
-using Rascar.Toolbox;
 
 public class MoneyManager : Singleton<MoneyManager>
 {

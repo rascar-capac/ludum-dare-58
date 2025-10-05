@@ -7,7 +7,6 @@
     "com.unity.render-pipelines.universal": "17.2.0",
     "com.unity.timeline": "1.8.9",
     "com.unity.ugui": "2.0.0",
-    "me.rascar.toolbox": "https://github.com/rascar-capac/Toolbox.git",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

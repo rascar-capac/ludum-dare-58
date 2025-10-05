@@ -4672,6 +4672,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Tax Hans!
       objectReference: {fileID: 0}
+    - target: {fileID: 1784286645024786262, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784286645024786262, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784286645024786262, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1987461369479214297, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 156.5
@@ -4680,13 +4692,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 3595475680245843145, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3991585003360846394, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4133495393576604039, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
+      propertyPath: m_fontSize
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133495393576604039, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 49
+      objectReference: {fileID: 0}
     - target: {fileID: 5797978041924670453, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 343.0251
+      value: 362.39
       objectReference: {fileID: 0}
     - target: {fileID: 5797978041924670453, guid: 0192bfa8896f4c14b9123f962cbbef2e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5258,6 +5282,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Tax Hans again
       objectReference: {fileID: 0}
+    - target: {fileID: 2897735520024842128, guid: a6a4a12e3b1cb69489f124e565b4fcff, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.9999847
+      objectReference: {fileID: 0}
     - target: {fileID: 3642884315904083603, guid: a6a4a12e3b1cb69489f124e565b4fcff, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5266,9 +5294,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 5477956141868000094, guid: a6a4a12e3b1cb69489f124e565b4fcff, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 154
+      objectReference: {fileID: 0}
     - target: {fileID: 6627318683420943415, guid: a6a4a12e3b1cb69489f124e565b4fcff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -9
+      value: -162.99998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

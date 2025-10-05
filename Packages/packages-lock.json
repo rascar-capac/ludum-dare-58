@@ -199,12 +199,6 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-    "me.rascar.toolbox": {
-      "version": "file:Toolbox",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
