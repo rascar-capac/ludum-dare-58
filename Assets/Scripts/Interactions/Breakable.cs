@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class Breakable : MonoBehaviour, ITreasure
     public List<GameObject> Content;
     public float Resistance01;
     public bool IsBroken;
+
+    public static event Action<Breakable> OnBroken;
 
     private void Awake()
     {
@@ -43,6 +46,7 @@ public class Breakable : MonoBehaviour, ITreasure
         TreasureProximityDetector.Instance.UnregisterTreasure(this);
         Destroy(Object);
         IsBroken = true;
+        OnBroken?.Invoke(this);
     }
 
     public void SetResistance(float value)
