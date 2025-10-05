@@ -86,6 +86,15 @@ public class MenuScreen : MonoBehaviour
 
         StatsContainer.SetActive(true);
         GameStatus.text = isWon ? "Tax collected!" : "You didn't collect enough…";
-        Score.text = score.ToString();
+
+        if (isWon)
+        {
+            Score.gameObject.SetActive(false);
+        }
+        else
+        {
+            Score.gameObject.SetActive(true);
+            Score.text = score.ToString();
+        }
     }
 }
