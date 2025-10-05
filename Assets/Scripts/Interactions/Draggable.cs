@@ -9,10 +9,11 @@ public class Draggable : MonoBehaviour, IInteractable
 
     private int _initialLayer;
     private int _initialSortingOrder;
+    private Vector3 _currentVelocity;
 
     public void HoldInteraction(Vector2 mouseWorldPosition)
     {
-        Object.transform.position = mouseWorldPosition;
+        Object.transform.position = Vector3.SmoothDamp(Object.transform.position, mouseWorldPosition, ref _currentVelocity, 0.05f, 30f);
     }
 
     public void StartInteraction(Vector2 mouseWorldPosition)
