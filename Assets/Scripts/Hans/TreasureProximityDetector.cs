@@ -36,6 +36,11 @@ public class TreasureProximityDetector : Singleton<TreasureProximityDetector>
         _treasureList.Add(treasure);
     }
 
+    public void UnregisterTreasure(ITreasure treasure)
+    {
+        _treasureList.Remove(treasure);
+    }
+
     private void Update()
     {
         CheckTreasureProximity();

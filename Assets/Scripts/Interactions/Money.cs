@@ -23,6 +23,7 @@ public class Money : MonoBehaviour, IInteractable, ITreasure
     public void CollectMoney()
     {
         MoneyManager.Instance.CollectMoney(Value);
+        TreasureProximityDetector.Instance.UnregisterTreasure(this);
         Destroy(Object);
         //TODO: animation
     }

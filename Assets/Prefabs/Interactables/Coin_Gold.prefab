@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Money
   _object: {fileID: 9092120005375350912}
-  Value: 1
+  Value: 5
 --- !u!58 &4425548086326668877
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 2511929247662739967}
   - component: {fileID: 5284266626342001525}
   m_Layer: 8
-  m_Name: Coin
+  m_Name: Coin_Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
