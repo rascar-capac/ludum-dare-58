@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 8142884135454612119}
   - component: {fileID: 9030359545474570014}
   - component: {fileID: 2109075110894238398}
+  - component: {fileID: 5003424934353927276}
+  - component: {fileID: 7519903884508659070}
   m_Layer: 0
   m_Name: Hans
   m_TagString: Untagged
@@ -193,6 +195,43 @@ MonoBehaviour:
   EyeSpeed: 0.3
   DistanceWithMinProximityMultiplier: 2
   DistanceWithMaxProximityMultiplier: 0.5
+--- !u!95 &5003424934353927276
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067909566592348357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4cb4b19d4192fae44806363bda5ddf7f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7519903884508659070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067909566592348357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f629bed4935874ca78c6119bc67cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreasureProximityDetector
+  _destroyOnLoad: 1
+  FreakingMaxDistance: 1
+  HansAnimator: {fileID: 5003424934353927276}
 --- !u!1 &2868245046788322166
 GameObject:
   m_ObjectHideFlags: 0

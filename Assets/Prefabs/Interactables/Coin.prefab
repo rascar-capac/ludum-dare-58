@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74feb2a3047c134f8dec5be52c30af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Money
-  Object: {fileID: 9092120005375350912}
+  _object: {fileID: 9092120005375350912}
   Value: 1
 --- !u!58 &4425548086326668877
 CircleCollider2D:

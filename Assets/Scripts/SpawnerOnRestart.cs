@@ -6,7 +6,6 @@ public class SpawnerOnRestart : MonoBehaviour
     public Transform Prefab;
 
     public List<SceneObjectInfo> ObjectsFromScene = new();
-    public bool GameHasBeenStartedOnce;
 
     private void Awake()
     {
@@ -20,14 +19,12 @@ public class SpawnerOnRestart : MonoBehaviour
         GameManager.Instance.OnGameStarted += GameManager_OnGameStarted;
     }
 
-    private void GameManager_OnGameStarted()
+    private void GameManager_OnGameStarted(bool isFirstGame)
     {
-        if (GameHasBeenStartedOnce)
+        if (!isFirstGame)
         {
             RespawnObjects();
         }
-
-        GameHasBeenStartedOnce = true;
     }
 
     public void RespawnObjects()

@@ -31,7 +31,7 @@ public class InteractionManager : Singleton<InteractionManager>
 
     public void CheckInteractions()
     {
-        if (!GameManager.Instance.GameIsRunning || GameManager.Instance.GameIsPaused)
+        if (!GameManager.Instance.GameIsRunning)
         {
             return;
         }

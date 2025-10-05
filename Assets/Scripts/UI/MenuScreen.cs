@@ -43,7 +43,7 @@ public class MenuScreen : MonoBehaviour
         Refresh();
     }
 
-    private void GameManager_OnGameStarted()
+    private void GameManager_OnGameStarted(bool isFirstGame)
     {
         Close();
     }

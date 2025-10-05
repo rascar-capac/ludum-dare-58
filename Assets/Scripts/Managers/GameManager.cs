@@ -12,11 +12,13 @@ public class GameManager : Singleton<GameManager>
     public InputActionReference _pauseInput;
 
     public event Action OnGameReady;
-    public event Action OnGameStarted;
+    public event Action<bool> OnGameStarted;
     public event Action<bool, int> OnGameStopped;
     public event Action<bool> OnGamePauseChanged;
-    public bool GameIsRunning;
+    public bool GameIsStarted;
     public bool GameIsPaused;
+    public bool GameIsRunning => GameIsStarted && !GameIsPaused;
+    public bool GameHasBeenStartedOnce;
 
     protected override void Awake()
     {
@@ -32,10 +34,12 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
-        GameIsRunning = true;
+        GameIsStarted = true;
         SetPause(false);
 
-        OnGameStarted?.Invoke();
+        OnGameStarted?.Invoke(!GameHasBeenStartedOnce);
+
+        GameHasBeenStartedOnce = true;
     }
 
     public void StopGame()
@@ -43,7 +47,7 @@ public class GameManager : Singleton<GameManager>
         bool isWon = MoneyManager.Instance.MoneyAmount >= MoneyManager.Instance.Goal && TimeManager.Instance.Timer > 0f;
         int score = MoneyManager.Instance.MoneyAmount;
 
-        GameIsRunning = false;
+        GameIsStarted = false;
         SetPause(false);
 
         OnGameStopped?.Invoke(isWon, score);
@@ -51,7 +55,7 @@ public class GameManager : Singleton<GameManager>
 
     public void SetPause(bool isPaused)
     {
-        if (isPaused && !GameIsRunning)
+        if (isPaused && !GameIsStarted)
         {
             return;
         }

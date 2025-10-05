@@ -42,7 +42,7 @@ public class MoneyManager : Singleton<MoneyManager>
         OnInitialized?.Invoke();
     }
 
-    private void GameManager_OnGameStarted()
+    private void GameManager_OnGameStarted(bool isFirstGame)
     {
         Initialize();
     }

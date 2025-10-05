@@ -1,9 +1,16 @@
 using UnityEngine;
 
-public class Money : MonoBehaviour, IInteractable
+public class Money : MonoBehaviour, IInteractable, ITreasure
 {
-    public GameObject Object;
+    [SerializeField] private GameObject _object;
+
+    public GameObject Object => _object;
     public int Value;
+
+    private void Awake()
+    {
+        TreasureProximityDetector.Instance.RegisterTreasure(this);
+    }
 
     public void StartInteraction(Vector2 mouseWorldPosition)
     {

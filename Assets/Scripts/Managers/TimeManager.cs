@@ -27,7 +27,7 @@ public class TimeManager : Singleton<TimeManager>
         }
     }
 
-    private void GameManager_OnGameStarted()
+    private void GameManager_OnGameStarted(bool isFirstGame)
     {
         StartCountdown();
     }

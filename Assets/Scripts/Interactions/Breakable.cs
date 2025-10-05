@@ -1,10 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Breakable : MonoBehaviour, IInteractable
+public class Breakable : MonoBehaviour, IInteractable, ITreasure
 {
-    public GameObject Object;
+    [SerializeField] private GameObject _object;
+
+    public GameObject Object => _object;
     public List<GameObject> Content;
+
+    private void Awake()
+    {
+        TreasureProximityDetector.Instance.RegisterTreasure(this);
+    }
 
     public void StartInteraction(Vector2 mouseWorldPosition)
     {
