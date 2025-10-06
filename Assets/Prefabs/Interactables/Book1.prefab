@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 5251616667845428459}
   - component: {fileID: 3533233063493771222}
   - component: {fileID: 438508797024642666}
+  - component: {fileID: 1368515735512470526}
   m_Layer: 7
   m_Name: Book1
   m_TagString: Untagged
@@ -202,6 +203,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5406395, y: 1.3478771}
   m_EdgeRadius: 0
+--- !u!114 &1368515735512470526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763987652238291927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422b01bc453b0c0448c08078fa6a8568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Breakable
+  Rigidbody: {fileID: 3533233063493771222}
+  MinMaxDamagingVelocityMagnitude: {x: 3, y: 30}
+  SpriteRenderer: {fileID: 6612885162979570678}
+  Content: []
+  Resistance01: 0
+  IsBroken: 0
 --- !u!1 &6934781313936714352
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +310,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: f4ed04e0204993345a6bb05fd33a32b0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

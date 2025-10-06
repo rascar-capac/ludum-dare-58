@@ -173,7 +173,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: f4ed04e0204993345a6bb05fd33a32b0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 2552532770407366503}
   - component: {fileID: 696836999764846408}
   - component: {fileID: 8491568875863544967}
+  - component: {fileID: 6906142485157405471}
   m_Layer: 7
   m_Name: Sack
   m_TagString: Untagged
@@ -342,3 +343,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.010522925, y: -0.1853614}
   m_Size: {x: 1.0862541, y: 0.75}
   m_Direction: 1
+--- !u!114 &6906142485157405471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950421200933235526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422b01bc453b0c0448c08078fa6a8568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Breakable
+  Rigidbody: {fileID: 2552532770407366503}
+  MinMaxDamagingVelocityMagnitude: {x: 5, y: 40}
+  SpriteRenderer: {fileID: 8858363236153700918}
+  Content: []
+  Resistance01: 0
+  IsBroken: 0

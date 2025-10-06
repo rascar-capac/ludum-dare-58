@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1819347097771611543}
   - component: {fileID: 7629201619693788521}
   - component: {fileID: 5188363999459511595}
+  - component: {fileID: 6555037091920199211}
   m_Layer: 7
   m_Name: Basket
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46309336437953570}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.63, y: -2.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -122,6 +123,24 @@ PolygonCollider2D:
       - {x: 1.7158176, y: -0.7539629}
       - {x: 1.2928948, y: -0.044106066}
   m_UseDelaunayMesh: 0
+--- !u!114 &6555037091920199211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46309336437953570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422b01bc453b0c0448c08078fa6a8568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Breakable
+  Rigidbody: {fileID: 7629201619693788521}
+  MinMaxDamagingVelocityMagnitude: {x: 7, y: 40}
+  SpriteRenderer: {fileID: 6614253372450665643}
+  Content: []
+  Resistance01: 0
+  IsBroken: 0
 --- !u!1 &1137283770794011510
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +230,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: f4ed04e0204993345a6bb05fd33a32b0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
