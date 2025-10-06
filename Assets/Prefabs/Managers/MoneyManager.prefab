@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
   _destroyOnLoad: 1
-  Goal: 20
+  Goal: 40
   MoneyAmount: 0
