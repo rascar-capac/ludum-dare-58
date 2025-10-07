@@ -5383,7 +5383,11 @@ PrefabInstance:
     - target: {fileID: 1155559702028169228, guid: 10d0f7c40a48ec34291ad73abe1de2a9, type: 3}
       propertyPath: 'Content.Array.data[1]'
       value: 
-      objectReference: {fileID: 287720001861980392, guid: 47286c460bca40442a40b124bec1f34f, type: 3}
+      objectReference: {fileID: 287720001861980392, guid: a55b03d2e5a18724aaa9ea0758222524, type: 3}
+    - target: {fileID: 1155559702028169228, guid: 10d0f7c40a48ec34291ad73abe1de2a9, type: 3}
+      propertyPath: 'Content.Array.data[2]'
+      value: 
+      objectReference: {fileID: 287720001861980392, guid: a55b03d2e5a18724aaa9ea0758222524, type: 3}
     - target: {fileID: 2699695007767703232, guid: 10d0f7c40a48ec34291ad73abe1de2a9, type: 3}
       propertyPath: m_Name
       value: Plate
