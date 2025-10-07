@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -33,6 +34,8 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         GameIsStarted = true;
         SetPause(false);
 
